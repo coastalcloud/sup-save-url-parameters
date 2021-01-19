@@ -22,6 +22,8 @@ var queryForm = function(settings){
   for (var i=0; i<hiddenFields.length; i++) {
     var param = sessionStorage.getItem(hiddenFields[i].name);
     if (param) document.getElementsByName(hiddenFields[i].name)[0].value = param;
+    //if no field with that name, then search by field title
+    //example: document.querySelector('[title="utm_campaign"]')
   }
 }
 
