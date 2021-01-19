@@ -32,7 +32,7 @@ var queryForm = function(settings){
 
         const els = document.querySelector(`input[title="${hiddenFields[i].name}"]`);
         
-        if(els.length){
+        if(els && els.length){
           els[0].value = param;
         }
       }
